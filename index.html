@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Palicode • A Hunter's Guide</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <script type="text/x-handlebars" data-template-name="quests">
+      <section id="hunter-guide">
+        <header id="header">
+          <h1>Hunter Reference</h1>
+        </header>
+
+        <nav id="hunter-ranks">
+          <ul>
+            <li><a href="#">Rank 1</a></li>
+            <li><a href="#">Rank 2</a></li>
+            <li><a href="#">Rank 3</a></li>
+          </ul>
+        </nav>
+
+        <section id="main">
+          <ul id="quest-list" class="rank1">
+            {{#each quest in model}}
+              <li class="quest">
+                <dl>
+                  <dt>Title: {{quest.title}}</dt>
+                  <dt>Type: {{quest.type}}</dt>
+                  <dt>Objective: {{quest.objective}}</dt>
+                  <dt>Subquest: {{quest.subquest}}</dt>
+                  <dt>Location: {{quest.location}}</dt>
+                  <dt>Monsters: {{quest.monsters}}</dt>
+                  <dt>Reward: {{quest.reward}}</dt>
+                  <dt>Key Quest: {{quest.keyQuest}}</dt>
+                </dl>
+              </li>
+            {{/each}}
+          </ul>
+        </section>
+
+      </section>
+    </script>
+
+    <script src="js/libs/jquery-1.11.2.min.js"></script>
+    <script src="js/libs/handlebars-v1.3.0.js"></script>
+    <script src="js/libs/ember.js"></script>
+    <script src="js/libs/ember-data.js"></script>
+
+    <script src="js/application.js"></script>
+    <script src="js/router.js"></script>
+    <script src="js/models/quest.js"></script>
+  </body>
+</html>
