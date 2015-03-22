@@ -20,7 +20,7 @@
         <ul>
           {{#each rank in model}}
             <li>
-              {{#link-to "rank-quests" activeClass="selected"}} {{rank.name}} {{/link-to}}
+              {{#link-to "rank-quests" rank activeClass="selected"}} {{rank.name}} {{/link-to}}
             </li>
           {{/each}}
         </ul>
