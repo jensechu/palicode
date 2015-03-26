@@ -29,7 +29,7 @@
       <ul id="quest-list" class="rank1">
         {{#each rank in model}}
           {{#each quest in rank.quests}}
-            <li {{bind-attr class="quest.isCompleted:completed"}}>
+            <li {{bind-attr class="quest.isKeyQuest:key-quest"}}>
               <dl>
                 <dt>Title: {{quest.title}}</dt>
                 <dt>Type: {{quest.type}}</dt>
@@ -37,8 +37,6 @@
                 <dt>Subquest: {{quest.subquest}}</dt>
                 <dt>Location: {{quest.location}}</dt>
                 <dt>Monsters: {{quest.monsters}}</dt>
-                <dt>Reward: {{quest.reward}}</dt>
-                <dt>Key Quest: {{quest.keyQuest}}</dt>
               </dl>
             </li>
           {{/each}}
@@ -59,8 +57,6 @@
               <dt>Subquest: {{quest.subquest}}</dt>
               <dt>Location: {{quest.location}}</dt>
               <dt>Monsters: {{quest.monsters}}</dt>
-              <dt>Reward: {{quest.reward}}</dt>
-              <dt>Key Quest: {{quest.keyQuest}}</dt>
             </dl>
           </li>
         {{/each}}
